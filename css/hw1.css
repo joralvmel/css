@@ -1,150 +1,185 @@
 
-body {
-	padding: 0.25% 1%;
-	margin: 0.25% 1%; 
-}
-
-header {
-	background-color: rgb(153, 153, 153);
-	background-image: url('../images/flywheel.jpg');
-}
-
-
- nav a {
-	background-color: rgb(153, 204, 000);
-	color: rgb(204, 102,000);
-	text-align: center;
-	font-size: 125%; 
-	display: inline-block;
-	width: 14%;
+/*The body should have padding and margin*/
+body { 
 	padding: 1%;
-	margin: 1% 4%; 
-	float: center; 
-	border-radius: 10%;
-	text-decoration: none;
-	font-family: Verdana, Geneva, sans-serif;
-}
+	margin: 0.5%;
+	 }
 
-
-
-h1, h2 {
-	text-transform: uppercase;
-	font-family: Verdana, Geneva, sans-serif; 
+/*The header should have a background color, background image (using a local image), and padding*/
+header { 
+	background-color: #B3B3B3;
+	background-image: url('../images/flywheel.jpg');
+	background-position: 0% 0%;
+	padding: 1% 1% 3% 2%;
+	background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 2000%;
 }
 
 h1 {
-	color: rgb(255, 255, 255);
-	font-size: 200%;
 	text-align: center;
+	color: #FFFFFF;
+	font-variant: small-caps;
+	font-size: 36px;
+	font-family: "Times New Roman", Times, serif;
 }
 
 h2 {
-	color: rgb(204, 102,000);
+	font-variant: small-caps;
+	font-size: 28px;
+	font-family: "Times New Roman", Times, serif;
 }
 
-main {
-	background-color: rgb(120, 120, 120);
+
+/*The sections should be next to each other, not one on top of the other.*/
+.left{
+	display: inline-block;
+	background-color: #6b8e23;
+	padding:15px;
+	height: 100vh;
+	width: 14%;
+	float: left;
+	margin-right: 1%;
+}
+.right{
+ 	display: inline-block;
+	width: 75%;
+	padding: 1%;
+	font-family: Arial, Helvetica, sans-serif;    
+	text-align: justify;
 }
 
+aside {
+	display: block;
+}
+
+section{
+	display: block;
+}
+
+/*The images should be part of the page now. In addition, they should have a border, be centered 
+  horizontally, and have vertical (top/bottom) space between them and the other images.*/
 img {
-	border: 5px solid; 
-	border-color:  rgb(255, 255, 255);
-	width: 70%;
-	display: block; 
-	margin: 15px; 
-	margin-right: auto;
-	margin-left: auto; 
+	width: 80%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px ;
+	margin-bottom: 10px;
+	border: solid;
+	border-color: #000000;
+}
+
+/*The navigation links (and only the links in the navigation) should be styled 
+  with a new display, margin, border-radius, text-decoration, and padding*/
+nav {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #000000;
+    background: #abaaa99e;
+    width: 150px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin:10px;  
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/*When mouse hovers over link*/
+nav a:hover{  
+    background: #6f6f6f;
+    color: #ffffff;
+}
+
+/*When user tabs to this link*/
+nav a:focus{ 
+    background: #6f6f6f;
+    color: #ffffff;
+}
+
+/*The link to the current page should be styled differently from the other links (using class = "active')*/
+.active{ 
+    background: #ffffffae;
+    color: #000000;
 }
 
 
-/* Table and table part specifications */
-table {
-	font-family: Tahoma, Geneva, sans-serif; 
+/*FINAL PROJECT*/
+/*------------------------------------------------------------------------------------------------------------------*/
+
+
+/*The table should be styled using at least four properties*/
+table{
+	font-family: Arial, Helvetica, sans-serif;  
 	font-size: 16px;
 	font-weight: normal;
-	width: 80%; 
-	display: block; 
-	margin: 0 auto; 	
-}	
-
-tr:first-child {
-	color: rgb(95, 187, 12);
-	background-color: rgb(248, 186, 123);	
-	background-image: linear-gradient(orange, white);
-	text-transform: uppercase; 
-		
+	line-height: 150%;
+	width: 80%;
+	margin: 0 auto;
 }
 
-th {
-	padding: 10px;	
-	border: 2px solid rgb(239, 141, 43);
-	border-bottom-width: 4px;
+/*The table headings should have a border, background color, and at least one other property*/
+th{
+	background-color: #6b8e23;
+	border-radius: 5px 5px 0 0;
+	border: 1px solid #566732;
+	border-bottom-width: thick;
+	color:#ffffff;
+	font-size: 120%;
+	text-transform: uppercase;
+	padding: 8px;
 }
 
-td {
-    color: rgb(16, 10, 10);
-	padding: 7px; 
-	background-color: rgb(253, 229, 205);	
-	opacity: .8;
-	border-radius: 2px;
+
+/*Style the table so that the text in the first column is left-aligned and the text in the 
+  other two columns is centered*/
+table{
+	text-align: center;
 }
 
-tr th:first-child {
-	text-align: left; 
-}
-tr td:first-child {
-	text-align: left; 
+th:first-child{
+	text-align: left;
 }
 
-tr th:nth-child(n+2) {
-	text-align: center; 
+td:first-child{
+	text-align: left;
 }
 
-tr td:nth-child(n+2) {
-	text-align: center; 
+/*Set the opacity of the table rows to a value between .6 and .8 (make sure it is still visible)*/
+tr{
+	opacity: 0.7;
 }
 
-td:hover{
+/*Change the opacity of a row when it is hovered over*/
+tr:hover{
 	opacity: 1;
 }
 
 
-/* Properties for curving border of top of table */
-tr:first-child{
-	-webkit-border-radius: 25px 25px 0 0;
-	border-radius: 25px 25px 0 0;	
-}
-tr:first-child>th:first-child {
-	-webkit-border-radius: 25px 0 0 0;
-	border-radius: 25px 0 0 0;	
-}
-
-tr:first-child>th:last-child{
-	-moz-border-radius: 0 25px 0 0;
-	-webkit-border-radius: 0 25px 0 0;
-	border-radius: 0 25px 0 0;	
+/*The table elements < td > should be styled using at least four properties*/
+td{
+	padding: 5px;
+	color: #000000;
+	border-radius: 2px;
+	background: #e6f9be;
 }
 
 
-/* Class based specifications */
 
-.active {
-	background-color: rgb(255, 255, 255);
-	color: rgb(153, 204, 000);
-	border-color: rgb(153, 204, 000);
-	border: solid 2px; 
-}
 
-.left {
-	float: left; 
-	display: block;
-	background-color: rgb(153, 204, 000);
-	width: 20%;
-}
 
-.right {
-	float: right;
-	width: 76%;
-	padding: 2%; 
-}
+
+
+
+
+
+
+
+
+
 
